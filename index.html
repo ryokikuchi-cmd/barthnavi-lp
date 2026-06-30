@@ -81,20 +81,24 @@ section.sec:nth-of-type(even)::before{top:auto;right:auto;bottom:-42px;left:-42p
 .gh .tel{font-size:12.5px;color:var(--gray);font-weight:700}
 @media(max-width:720px){.gh .tel,.gh .btn-line{display:none}}
 
-/* hero (画像＋コピーoverlay) */
-.hero-ov{position:relative;max-width:1000px;margin:0 auto;background:#fff}
-.hero-ov>img{display:block;width:100%;height:auto}
-.hero-ov .ov{position:absolute;top:0;left:0;right:0;padding:26px 6% 80px;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.82) 48%,rgba(255,255,255,0) 100%)}
-.hero-ov .ov .tagpills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.hero-ov .ov .tagpill{background:var(--navy);color:#fff;font-size:12px;font-weight:800;padding:5px 13px;border-radius:999px;border:none}
-.hero-ov .ov h1{font-size:34px;line-height:1.42;font-weight:900;color:var(--navy)}
-.hero-ov .ov h1 .hl-orange{color:var(--navy)}
-.hero-ov .ov .lead{margin-top:14px;font-size:16px;color:var(--ink);font-weight:600;line-height:1.7}
+/* hero (PC横長/SP縦長 画像＋コピーoverlay) */
+.hero-ov{position:relative;max-width:1200px;margin:0 auto;background:#fff}
+.hero-ov picture,.hero-ov picture img{display:block;width:100%;height:auto}
+.hero-ov .ov{position:absolute;inset:0;display:flex;align-items:center}
+.hero-ov .ov-in{padding:0 5%;max-width:50%}
+.hero-ov .tagpills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.hero-ov .tagpill{background:var(--navy);color:#fff;font-size:15px;font-weight:800;padding:6px 17px;border-radius:999px;border:none}
+.hero-ov h1{font-size:50px;line-height:1.38;font-weight:900;color:var(--navy)}
+.hero-ov h1 .hl-orange{color:var(--navy)}
+.hero-ov .lead{margin-top:20px;font-size:22px;color:var(--ink);font-weight:700;line-height:1.7}
+@media(max-width:980px){.hero-ov h1{font-size:40px}.hero-ov .lead{font-size:18px}}
 @media(max-width:700px){
-  .hero-ov .ov{padding:16px 6% 54px}
-  .hero-ov .ov h1{font-size:21px}
-  .hero-ov .ov .lead{font-size:12.5px;margin-top:9px}
-  .hero-ov .ov .tagpill{font-size:10.5px;padding:4px 10px}
+  .hero-ov .ov{align-items:flex-start}
+  .hero-ov .ov-in{max-width:100%;padding:8% 7% 0}
+  .hero-ov .tagpills{margin-bottom:14px}
+  .hero-ov .tagpill{font-size:13px;padding:5px 14px}
+  .hero-ov h1{font-size:30px;line-height:1.45}
+  .hero-ov .lead{font-size:15px;margin-top:14px}
 }
 /* hero */
 .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#0f2f57 0%,#1a4f8b 55%,#1f7fae 100%);color:#fff}
@@ -372,13 +376,18 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
 
 <main>
 
-<!-- Hero (画像＋コピーoverlay) -->
+<!-- Hero (PC横長/SP縦長 画像＋コピーoverlay) -->
 <section class="hero-ov">
-  <img src="assets/images/fv.png" alt="バースナビ｜トラック受付・荷待ち管理・バース管理システムのイメージ" width="1100" height="1100" fetchpriority="high">
+  <picture>
+    <source media="(min-width:701px)" srcset="assets/images/fv-pc.png" width="1536" height="1024">
+    <img src="assets/images/fv-sp.png" alt="バースナビ｜トラック受付・荷待ち管理・バース管理システムのイメージ" width="1024" height="1536" fetchpriority="high">
+  </picture>
   <div class="ov">
-    <div class="tagpills"><span class="tagpill">荷主</span><span class="tagpill">倉庫</span><span class="tagpill">3PL</span></div>
-    <h1>トラック受付/荷待ち管理を<br><span class="hl-orange">月10,000円・LINEだけで</span></h1>
-    <p class="lead">ドライバーはLINEでQRを読むだけ、<br>倉庫は管理画面で完結。<br>物流効率化法の記録にも標準対応</p>
+    <div class="ov-in">
+      <div class="tagpills"><span class="tagpill">荷主</span><span class="tagpill">倉庫</span><span class="tagpill">3PL</span></div>
+      <h1>トラック受付/荷待ち管理を<br><span class="hl-orange">月10,000円・LINEだけで</span></h1>
+      <p class="lead">ドライバーはLINEでQRを読むだけ、<br>倉庫は管理画面で完結。<br>物流効率化法の記録にも標準対応</p>
+    </div>
   </div>
 </section>
 
