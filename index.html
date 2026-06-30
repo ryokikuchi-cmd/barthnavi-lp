@@ -82,23 +82,23 @@ section.sec:nth-of-type(even)::before{top:auto;right:auto;bottom:-42px;left:-42p
 @media(max-width:720px){.gh .tel,.gh .btn-line{display:none}}
 
 /* hero (PC横長/SP縦長 画像＋コピーoverlay) */
-.hero-ov{position:relative;max-width:1200px;margin:0 auto;background:#fff}
+.hero-ov{position:relative;max-width:1200px;margin:0 auto;background:#fff;overflow:hidden}
 .hero-ov picture,.hero-ov picture img{display:block;width:100%;height:auto}
 .hero-ov .ov{position:absolute;inset:0;display:flex;align-items:center}
-.hero-ov .ov-in{padding:0 5%;max-width:50%}
-.hero-ov .tagpills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.hero-ov .ov-in{margin-left:5%;max-width:620px;background:rgba(255,255,255,.68);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:18px;padding:30px 34px;box-shadow:0 10px 30px rgba(20,59,102,.12)}
+.hero-ov .tagpills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
 .hero-ov .tagpill{background:var(--navy);color:#fff;font-size:15px;font-weight:800;padding:6px 17px;border-radius:999px;border:none}
-.hero-ov h1{font-size:50px;line-height:1.38;font-weight:900;color:var(--navy)}
+.hero-ov h1{font-size:44px;line-height:1.4;font-weight:900;color:var(--navy);white-space:nowrap}
 .hero-ov h1 .hl-orange{color:var(--navy)}
-.hero-ov .lead{margin-top:20px;font-size:22px;color:var(--ink);font-weight:700;line-height:1.7}
-@media(max-width:980px){.hero-ov h1{font-size:40px}.hero-ov .lead{font-size:18px}}
+.hero-ov .lead{margin-top:18px;font-size:20px;color:var(--ink);font-weight:700;line-height:1.7}
+@media(max-width:980px){.hero-ov .ov-in{max-width:520px}.hero-ov h1{font-size:36px}.hero-ov .lead{font-size:17px}}
 @media(max-width:700px){
   .hero-ov .ov{align-items:flex-start}
-  .hero-ov .ov-in{max-width:100%;padding:8% 7% 0}
-  .hero-ov .tagpills{margin-bottom:14px}
-  .hero-ov .tagpill{font-size:13px;padding:5px 14px}
-  .hero-ov h1{font-size:30px;line-height:1.45}
-  .hero-ov .lead{font-size:15px;margin-top:14px}
+  .hero-ov .ov-in{margin:7% 5% 0;max-width:none;width:auto;padding:18px 20px;background:rgba(255,255,255,.82)}
+  .hero-ov .tagpills{margin-bottom:12px}
+  .hero-ov .tagpill{font-size:12.5px;padding:5px 13px}
+  .hero-ov h1{font-size:23px;line-height:1.5}
+  .hero-ov .lead{font-size:14px;margin-top:12px}
 }
 /* hero */
 .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#0f2f57 0%,#1a4f8b 55%,#1f7fae 100%);color:#fff}
