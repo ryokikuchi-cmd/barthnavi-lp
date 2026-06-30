@@ -335,6 +335,9 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
 .sim-foot{margin-top:10px}
 @media(max-width:760px){.pricing,.compare{padding:34px 0}}
 
+/* --- FV 1枚画像 --- */
+.hero-img{background:#fff;text-align:center}
+.hero-img img{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
 /* --- FEATUREスクショ / 料金注釈 --- */
 .feat{flex-direction:column;align-items:flex-start}
 .feat-shot{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block}
@@ -357,20 +360,9 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
 
 <main>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <div class="tagpills">
-        <span class="tagpill">荷主</span>
-        <span class="tagpill">倉庫</span>
-        <span class="tagpill">3PL</span>
-      </div>
-      <h1>トラック受付/荷待ち管理を<br><span class="hl-orange">月10,000円・LINEだけで</span></h1>
-      <p class="lead">ドライバーはLINEでQRを読むだけ、<br>倉庫は管理画面で完結。<br>物流効率化法の記録にも標準対応</p>
-    </div>
-    <div class="hero-illust"><img src="assets/icons/hero-scene.png" width="1024" height="1024" decoding="async" fetchpriority="high" alt="バースナビの画面イメージ：PCの管理ダッシュボードと、スマホのQR受付画面（受付番号付き）" onerror="this.closest('.hero-illust').style.display='none'"></div>
-  </div>
+<!-- Hero (1枚画像) -->
+<section class="hero-img">
+  <img src="assets/images/fv.png" alt="バースナビ｜荷待ちを、ゼロへ。トラック受付を効率化して現場の業務をラクにする、バース管理システム" width="1200" height="1000" fetchpriority="high">
 </section>
 
 <!-- Pains -->
