@@ -11,4 +11,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://barthnavi-lp-10649.netlify.app/sitemap.xml
+Sitemap: https://ryokikuchi-cmd.github.io/barthnavi-lp/sitemap.xml
