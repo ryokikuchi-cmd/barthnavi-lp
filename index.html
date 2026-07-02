@@ -332,13 +332,27 @@ footer{background:var(--navy-d);color:#aebfd2;padding:40px 0;font-size:13px}
 footer small{display:block;margin-top:16px;color:#7d92ab}
 
 /* sticky cta */
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:90;padding:12px 16px;display:flex;justify-content:center;pointer-events:none}
-.sticky a{pointer-events:auto;display:flex;align-items:center;gap:18px;width:100%;max-width:720px;background:linear-gradient(90deg,#ff8a3d,#ff6a2c);border-radius:16px;padding:12px 26px;box-shadow:0 12px 30px rgba(255,106,44,.45);transition:.18s}
-.sticky a:hover{transform:translateY(-2px)}
-.sticky .t{flex:1;text-align:center}
-.sticky .t .s1{display:block;color:#fff3e9;font-weight:800;font-size:13px}
-.sticky .t .s2{display:block;color:#fff;font-weight:900;font-size:19px;line-height:1.2}
-@media(max-width:560px){.sticky .t .s2{font-size:15px}}
+/* MERIT 大型ベネフィット */
+.merit-hero{max-width:760px;margin:0 auto 40px;background:#fff;border:2px solid var(--cyan);border-radius:20px;box-shadow:var(--shadow);padding:30px 28px 32px;text-align:center}
+.merit-hero .mh-top{display:inline-block;background:var(--navy);color:#fff;font-weight:800;font-size:15px;padding:8px 20px;border-radius:999px;margin-bottom:18px}
+.merit-hero .mh-big{font-size:30px;font-weight:900;color:var(--navy);line-height:1.45}
+.merit-hero .mh-price{color:var(--accent);font-size:52px;letter-spacing:0}
+@media(max-width:700px){.merit-hero{padding:24px 18px 26px}.merit-hero .mh-top{font-size:13px;padding:6px 15px}.merit-hero .mh-big{font-size:21px}.merit-hero .mh-price{font-size:36px}}
+
+/* フォーム見出しバッジ */
+.form-badge{display:inline-block;background:#fff3eb;border:1px solid var(--accent);color:#c4500f;font-weight:900;font-size:15px;padding:8px 20px;border-radius:999px;margin:0 auto 18px}
+
+/* 追従CTA（強調・アニメ） */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:90;padding:11px 14px;display:flex;justify-content:center;pointer-events:none}
+.sticky a{pointer-events:auto;display:flex;align-items:center;gap:12px;width:100%;max-width:600px;background:linear-gradient(135deg,#ffa23d,#ff5a1f);border:2px solid #fff;border-radius:16px;padding:12px 16px 12px 22px;box-shadow:0 12px 30px rgba(255,90,31,.5);transition:.18s;animation:stickyPulse 1.9s ease-in-out infinite}
+@keyframes stickyPulse{0%,100%{box-shadow:0 10px 26px rgba(255,90,31,.42)}50%{box-shadow:0 14px 38px rgba(255,90,31,.82)}}
+.sticky a:hover{transform:translateY(-2px) scale(1.015);animation:none}
+.sticky .sc-l{flex:1;text-align:center;line-height:1.2}
+.sticky .s1{display:block;color:#fff;font-weight:800;font-size:13px;letter-spacing:.03em}
+.sticky .s2{display:block;color:#fff;font-weight:900;font-size:22px;text-shadow:0 1px 2px rgba(0,0,0,.18)}
+.sticky .sc-arrow{flex:none;width:40px;height:40px;border-radius:50%;background:#fff;color:#ff5a1f;font-weight:900;font-size:24px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(0,0,0,.15)}
+@media(prefers-reduced-motion:reduce){.sticky a{animation:none}}
+@media(max-width:560px){.sticky .s2{font-size:18px}.sticky .s1{font-size:12px}.sticky .sc-arrow{width:34px;height:34px;font-size:20px}}
 
 /* --- 追加修正（ロゴ・モック・コンパクト化） --- */
 .logo-img{height:36px;width:auto;display:block}
@@ -416,7 +430,10 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
     <span class="eyebrow">MERIT</span>
     <h2 class="h2">バースナビ<span class="u hl">なら</span></h2>
     <div class="bar"></div>
-    <p class="sub">すべてLINEと管理画面だけで解決</p>
+    <div class="merit-hero">
+      <p class="mh-top">紙も電話もエクセルも不要に</p>
+      <p class="mh-big">たった<span class="mh-price">月10,000円</span>で<br>バース受付を自動化</p>
+    </div>
     <div class="why-grid">
       <div class="whyc"><span class="ficon"><img src="assets/icons/icon-yen.png" alt="月10,000円の低価格を表すイラスト" width="40" height="40" loading="lazy" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><em style="display:none">💰</em></span><div class="no">MERIT 01</div><h4>業界最安級・月10,000円</h4><p>初期費用0円・端末不要、他社の半額以下。</p></div>
       <div class="whyc"><span class="ficon"><img src="assets/icons/icon-easy.png" alt="ドライバーと倉庫の双方がラクになることを表す握手のイラスト" width="40" height="40" loading="lazy" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><em style="display:none">🤝</em></span><div class="no">MERIT 02</div><h4>ドライバーも管理側もラク</h4><p>ドライバーはQRを読むだけ、倉庫は管理画面で完結。</p></div>
@@ -604,6 +621,7 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
   <div class="wrap">
     <h2>今なら無料で始められる</h2>
     <p>いまならテスト利用（ベータ）参加企業を募集中。費用をかけずにはじめられます。</p>
+    <p class="form-badge">＼ たったの10秒で完了 ／</p>
     <form class="lead-form" action="#" method="post" onsubmit="return false">
       <div class="fld"><label>会社名<span class="req">必須</span></label><input type="text" name="company" placeholder="例）株式会社○○物流" required></div>
       <div class="fld"><label>お名前<span class="req">必須</span></label><input type="text" name="name" placeholder="例）山田 太郎" required></div>
@@ -643,7 +661,8 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
 <!-- Sticky CTA -->
 <div class="sticky">
   <a href="#contact">
-    <span class="t"><span class="s1">今なら無料で始められる</span><span class="s2">今すぐ申し込み</span></span>
+    <span class="sc-l"><span class="s1">＼ 今なら無料・10秒で完了 ／</span><span class="s2">今すぐ申し込む</span></span>
+    <span class="sc-arrow" aria-hidden="true">›</span>
   </a>
 </div>
 
