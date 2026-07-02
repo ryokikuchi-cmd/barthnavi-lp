@@ -32,7 +32,7 @@
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"バースナビ","applicationCategory":"BusinessApplication","operatingSystem":"Web, LINE","description":"トラック受付・荷待ち管理・バース管理をLINEミニアプリで行うクラウドシステム。ドライバーはQRで受付、倉庫は管理画面で完結。物流効率化法で義務化された荷待ち時間の記録に標準対応。","featureList":["QRで受付（LINEミニアプリ・端末不要）","順番確認・呼び出し通知","荷待ち時間の自動記録・CSV/Excel出力","管理画面でのリアルタイム進捗管理","自動／手動の呼び出し切替","複数バース対応"],"offers":{"@type":"Offer","price":"10000","priceCurrency":"JPY","description":"月額10,000円（税抜・1拠点）／初期費用0円・端末不要。現在は無料テスト利用（ベータ）を募集中。"},"provider":{"@type":"Organization","name":"株式会社リズムチェンジ"}}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"専用アプリは必要ですか？","acceptedAnswer":{"@type":"Answer","text":"不要です。普段お使いのLINEだけで完結します。"}},{"@type":"Question","name":"初めて来るドライバーでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"QRを読み取るだけなので、初回・高齢のドライバーでも迷わず使えます。"}},{"@type":"Question","name":"導入までどのくらいかかりますか？","acceptedAnswer":{"@type":"Answer","text":"最短1週間で運用を開始できます。初期設定は弊社が伴走してサポートします。"}},{"@type":"Question","name":"物流効率化法に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"はい。義務化された荷待ち時間の記録に標準で対応しています。"}},{"@type":"Question","name":"料金はいくらですか？追加費用はかかりますか？","acceptedAnswer":{"@type":"Answer","text":"正式リリース後も月額10,000円（税抜・1拠点）、初期費用0円・端末不要です。いまはテスト利用（ベータ）期間中につき無料でお試しいただけます。"}},{"@type":"Question","name":"補助金は使えますか？","acceptedAnswer":{"@type":"Answer","text":"対象となる場合があります。お問い合わせ時に、活用できる補助金をあわせてご案内します。"}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"専用アプリは必要ですか？","acceptedAnswer":{"@type":"Answer","text":"不要です。普段お使いのLINEだけで完結します。"}},{"@type":"Question","name":"初めて来るドライバーでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"QRを読み取るだけなので、初回・高齢のドライバーでも迷わず使えます。"}},{"@type":"Question","name":"導入までどのくらいかかりますか？立ち上げは大変ですか？","acceptedAnswer":{"@type":"Answer","text":"最短1週間で運用を開始できます。初期設定・QR発行・運用設計まで弊社が完全サポートするため、貴社にかかる立ち上げ工数は約1時間程度です。"}},{"@type":"Question","name":"物流効率化法に対応していますか？","acceptedAnswer":{"@type":"Answer","text":"はい。義務化された荷待ち時間の記録に標準で対応しています。"}},{"@type":"Question","name":"料金はいくらですか？追加費用はかかりますか？","acceptedAnswer":{"@type":"Answer","text":"正式リリース後も月額10,000円（税抜・1拠点）、初期費用0円・端末不要です。いまはテスト利用（ベータ）期間中につき無料でお試しいただけます。"}},{"@type":"Question","name":"補助金は使えますか？","acceptedAnswer":{"@type":"Answer","text":"対象となる場合があります。お問い合わせ時に、活用できる補助金をあわせてご案内します。"}}]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"バースナビ","url":"https://ryokikuchi-cmd.github.io/barthnavi-lp/","inLanguage":"ja","publisher":{"@type":"Organization","name":"株式会社リズムチェンジ"}}
@@ -255,6 +255,10 @@ section.sec:nth-of-type(even)::before{top:auto;right:auto;bottom:-42px;left:-42p
 .tri{color:#c08a2e}.ng{color:#c0392b}
 .sim-foot{max-width:960px;margin:12px auto 0;font-size:12px;color:var(--gray)}
 @media(max-width:820px){.simcard{overflow-x:auto}.simhead,.simrow{grid-template-columns:1.2fr 1fr 1fr 1fr;min-width:680px}}
+
+/* support（導入サポート） */
+.support{background:#eaf2fb}
+.support .merit-hero{border-color:var(--accent)}
 
 /* why */
 .why{background:#fff}
@@ -489,6 +493,25 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
   </div>
 </section>
 
+<!-- Support（導入サポート） -->
+<section class="sec support">
+  <div class="wrap">
+    <span class="eyebrow">SUPPORT</span>
+    <h2 class="h2">導入のご不安は<br><span class="u hl">まるごとサポート</span></h2>
+    <div class="bar"></div>
+    <div class="merit-hero">
+      <p class="mh-top">面倒な立ち上げは、すべてお任せ</p>
+      <p class="mh-big">貴社にかかる立ち上げ工数は<br>たった<span class="mh-price">約1時間</span></p>
+    </div>
+    <div class="why-grid">
+      <div class="whyc"><span class="ficon"><em>🤝</em></span><div class="no">SUPPORT 01</div><h4>完全立ち上げサポート</h4><p>初期設定・QR発行・運用設計まで専任担当が伴走。まるごとお任せいただけます。</p></div>
+      <div class="whyc"><span class="ficon"><em>⏱️</em></span><div class="no">SUPPORT 02</div><h4>貴社の工数は約1時間</h4><p>簡単なヒアリングとご確認だけ。細かな設定は弊社が代行します。</p></div>
+      <div class="whyc"><span class="ficon"><em>💰</em></span><div class="no">SUPPORT 03</div><h4>初期費用0円</h4><p>導入コストは0円。立ち上げにかかる追加費用も一切ありません。</p></div>
+      <div class="whyc"><span class="ficon"><em>🚀</em></span><div class="no">SUPPORT 04</div><h4>最短1週間で運用開始</h4><p>お申し込みから最短1週間で、現場運用をスタートできます。</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ▼ SIMPLE/Ease セクションは非表示（コメントアウト）
 <section class="sec ease">
   <div class="wrap ease-wrap">
@@ -621,7 +644,7 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
     <div class="faq">
       <details><summary>専用アプリは必要ですか？</summary><div class="a">不要です。普段お使いのLINEだけで完結します。</div></details>
       <details><summary>初めて来るドライバーでも使えますか？</summary><div class="a">QRを読み取るだけなので、初回・高齢のドライバーでも迷わず使えます。</div></details>
-      <details><summary>導入までどのくらいかかりますか？</summary><div class="a">最短1週間で運用を開始できます。初期設定は弊社が伴走してサポートします。</div></details>
+      <details><summary>導入までどのくらいかかりますか？立ち上げは大変ですか？</summary><div class="a">最短1週間で運用を開始できます。初期設定・QR発行・運用設計まで弊社が完全サポートするため、貴社にかかる立ち上げ工数は約1時間程度。丸投げでご準備いただけます。</div></details>
       <details><summary>物流効率化法に対応していますか？</summary><div class="a">はい。義務化された荷待ち時間の記録に標準で対応しています。</div></details>
       <details><summary>料金はいくらですか？追加費用はかかりますか？</summary><div class="a">正式リリース後も月額10,000円（税抜・1拠点）、初期費用0円・端末不要です。いまはテスト利用（ベータ）期間中につき、無料でお試しいただけます。</div></details>
       <details><summary>補助金は使えますか？</summary><div class="a">対象となる場合があります。お問い合わせ時に、活用できる補助金をあわせてご案内します。</div></details>
