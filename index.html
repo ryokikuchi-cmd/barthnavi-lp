@@ -663,7 +663,7 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
     <h2>今なら無料で始められる</h2>
     <p>いまならテスト利用（ベータ）参加企業を募集中。費用をかけずにはじめられます。</p>
     <p class="form-badge">＼ たったの10秒で完了 ／</p>
-    <form class="lead-form" action="#" method="post" onsubmit="return false">
+    <form class="lead-form" id="leadForm" action="thanks.html" method="post">
       <div class="fld"><label>会社名<span class="req">必須</span></label><input type="text" name="company" placeholder="例）株式会社○○物流" required></div>
       <div class="fld"><label>お名前<span class="req">必須</span></label><input type="text" name="name" placeholder="例）山田 太郎" required></div>
       <div class="row2">
@@ -706,6 +706,21 @@ footer small{display:block;margin-top:16px;color:#7d92ab}
     <span class="sc-arrow" aria-hidden="true">›</span>
   </a>
 </div>
+
+<!-- フォーム送信 → thanksページ遷移 -->
+<script>
+(function(){
+  var f = document.getElementById('leadForm');
+  if(!f) return;
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){ f.reportValidity(); return; }
+    var btn = f.querySelector('button[type="submit"]');
+    if(btn){ btn.disabled = true; btn.textContent = '送信中...'; }
+    window.location.href = 'thanks.html';
+  });
+})();
+</script>
 
 </body>
 </html>
